@@ -6,6 +6,8 @@
   display: grid;
   grid-template-columns: max(200px, 15%) auto;
   grid-template-rows: 130px auto;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .sidebar {
@@ -43,7 +45,7 @@
 
 .navbarLower {
   display: grid;
-  grid-template-columns: 1fr 3fr 15fr 13fr 4fr 1fr 4fr 1fr 4fr 1fr;
+  grid-template-columns: 1fr 3fr 15fr 12fr 5fr 1fr 5fr 1fr 5fr 1fr;
 }
 
 .navbarLower button {
@@ -55,4 +57,60 @@
 .content {
   display: grid;
   grid-template-columns: 5fr 2fr;
+}
+
+.mainCards {
+  display: grid;
+  grid-template-rows: 30px auto;
+  max-height: 650px;
+}
+
+.sideCards {
+
+  display: grid;
+  grid-template-rows: 30px 2fr 30px 30px 2fr;
+  max-height: 650px;
+  margin: 0 10px;
+}
+
+.mainCardItems {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  font-size: 12px;
+}
+
+.indivCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.indivCard p {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.cardIcons {
+  display: grid;
+  grid-template-columns: 9fr repeat(3, 2fr);
+  grid-template-rows: 20px;
+}
+
+.announcementItems {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  font-size: 12px;
+}
+
+.trendingItems {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: repeat(4, 50px);
+  font-size: 12px;
+}
+
+.trendingItems p {
+  margin: 0;
 }
