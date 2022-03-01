@@ -21,7 +21,8 @@ body {
   grid-template-rows: 130px auto;
   max-width: 1200px;
   margin: auto;
-
+  
+  background-color: lightgrey;
 }
 
 html,
@@ -32,13 +33,13 @@ body,
 
 .sidebar {
   width: auto;
-  background-color: dodgerblue;
+  background-color: slategrey;
   color: white;
   grid-row: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-template-rows: repeat(24, 20px);
-  row-gap: 14px;
+  row-gap: 24px;
   column-gap: 4px;
   padding-left: 14px;
   padding-top: 14px;
@@ -48,6 +49,10 @@ body,
   margin: 0;
   font-weight: bold;
 }
+.sidebar div img {
+  position: relative;
+  top: -3px;
+}
 
 .sbMain {
   grid-row: 1 / 3;
@@ -55,22 +60,37 @@ body,
 .sbMain p {
   font-size: 24px;
 }
+.sbMain img {
+  position: relative;
+  left: -5px;
+}
 
 .navbar {
   display: grid;
   grid-template-rows: 3fr 4fr;
   background-color: white;
+  box-shadow: 0px 2px 2px 1px darkgrey;
+  z-index: 900;
 }
 
 .navbarUpper {
   display: grid;
   grid-template-columns: 1fr 1fr 10fr 2fr 1fr 1fr 4fr;
+  justify-items: center;
+  align-items: center;
+}
+
+#searchImg {
+  position: relative; 
+  top: 4px;
 }
 
 .navbarUpper input[type=search] {
   border-radius: 20px;
   height: 28px;
+  width: 75%;
   align-self: center;
+  justify-self: start;
   margin: 0 8px;
   background-color: lightgrey;
   border: 0;
@@ -79,15 +99,26 @@ body,
 .navbarLower {
   display: grid;
   grid-template-columns: 1fr 3fr 15fr 12fr 5fr 1fr 5fr 1fr 5fr 1fr;
+  justify-items: center;
+  align-items: center;
 }
 
 .navbarLower button {
   height: 28px;
   align-self: center;
   border-radius: 20px;
-  background-color: dodgerblue;
+  background-color: rgb(224, 104, 104);
   color: white;
   border: 0;
+  font-weight: bold;
+  width: 80px;
+}
+
+.navbarLowerGreeting p {
+  margin: 0;
+}
+.navbarLowerGreeting p:first-child {
+  font-size: 12px;
 }
 
 .content {
@@ -129,11 +160,12 @@ body,
   padding-left: 14px;
   padding-right: 14px;
   background-color: white;
-  border-left: 6px solid orange;
+  border-left: 6px solid maroon;
   border-radius: 6px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 3fr 1fr;
+  box-shadow: 2px 2px 2px 1px darkgrey;
 }
 
 .indivCard p {
@@ -154,6 +186,7 @@ body,
   background-color: white;
   border-radius: 6px;
   padding: 8px 18px;
+  box-shadow: 2px 2px 2px 1px darkgrey;
 }
 
 .announcementItems div {
@@ -166,10 +199,13 @@ body,
 .trendingItems {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  grid-template-rows: repeat(4, 50px);
+  grid-template-rows: auto;
   font-size: 12px;
   background-color: white;
   border-radius: 6px;
+  padding-left: 8px;
+  align-items: center;
+  box-shadow: 2px 2px 2px 1px darkgrey;
 }
 
 .trendingItems p {
