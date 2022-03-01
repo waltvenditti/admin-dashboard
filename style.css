@@ -38,7 +38,7 @@ body,
   grid-row: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 5fr;
-  grid-template-rows: repeat(24, 20px);
+  grid-template-rows: repeat(12, 20px);
   row-gap: 24px;
   column-gap: 4px;
   padding-left: 14px;
@@ -227,6 +227,10 @@ body,
   margin: 0;
 }
 
+.trendingItemsText {
+  margin-left: 8px;
+}
+
 #mainUserAvatar {
   border-radius: 50%;
   width: 64px;
@@ -235,4 +239,21 @@ body,
 #smallUserAvatar {
   border-radius: 50%;
   width: 40px;
+}
+
+.trendingImg img {
+  border-radius: 50%;
+  width: 40px;
+}
+
+.trendingImg {
+  justify-self: center;
+}
+
+.navbarLower button, 
+img,
+.sidebar div p,
+.navbarUpperUser b,
+.trendingItemsText {
+  cursor: pointer;
 }
